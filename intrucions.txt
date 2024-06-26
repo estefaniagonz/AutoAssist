@@ -1,0 +1,123 @@
+iniciar:npm start
+url  http://localhost:3000 
+
+mechanic
+get:http://localhost:3000/api/mechanics
+get id: http://localhost:3000/api/mechanics/1
+post:http://localhost:3000/api/mechanics
+
+{
+  "is_active": true,
+  "personal_info":3
+}
+
+update:http://localhost:3000/api/mechanics/5
+
+{
+  "is_active": false,
+  "personal_info":6
+}
+
+delete: http://localhost:3000/api/mechanics/1
+
+------------------------------------------------------------------------------------
+services
+get:http://localhost:3000/api/services
+get id: http://localhost:3000/api/services/1
+post:http://localhost:3000/api/services
+ {
+  "name": "Nuevo Servicio",
+  "description": "Descripción del nuevo servicio",
+  "value": 100
+}
+
+update:http://localhost:3000/api/services/1
+{
+  "name": "Nombre Actualizado del Servicio",
+  "description": "Descripción actualizada",
+  "value": 150
+}
+
+delete:http://localhost:3000/api/services/1
+
+-----------------------------------------------------------------------------
+vehicles
+get:http://localhost:3000/api/vehicles
+get id: http://localhost:3000/api/vehicles/1
+post:http://localhost:3000/api/vehicles
+{
+    "user": 1,
+    "model": "Toyota ",
+    "placa": "AB213",
+    "year": 2012
+}
+
+
+update:http://localhost:3000/api/vehicles/2
+{
+    "user": 2,
+    "model": "Modelo Actualizado",
+    "placa": "XYZ789",
+    "year":2012
+}
+
+delete:http://localhost:3000/api/vehicles/1
+
+-----------------------------------------------------------------------
+users
+get:http://localhost:3000/api/users
+get id: http://localhost:3000/api/users/1
+post:http://localhost:3000/api/users
+{
+  "is_admin": true, 
+  "personal_info": 1 
+}
+
+update: http://localhost:3000/api/users/3
+
+{
+  "is_admin": false, 
+  "personal_info": 3
+}
+
+delete: http://localhost:3000/api/users/3
+
+-----------------------------------------------------------
+
+product
+get:http://localhost:3000/api/products
+get id: http://localhost:3000/api/products/1
+post:http://localhost:3000/api/products
+{
+    "name": "Producto de Ejemplo",
+    "value": 19.99
+}
+
+update:http://localhost:3000/api/products/2
+{
+    "name": "Nuevo Nombre del Producto",
+    "value": 29.99
+}
+
+--------------------------------------------------------------
+payments
+get:http://localhost:3000/api/payments
+get id: http://localhost:3000/api/payments/77
+
+post:http://localhost:3000/api/payments
+{
+  "invoice":8974,
+  "amount": 130.75,
+  "date": "2023-06-15",
+  "payment_method": "credit_card"
+}
+
+update:http://localhost:3000/api/payments/77
+ {
+        "invoice": 34,
+        "amount": "25.00",
+        "date": "2024-06-7",
+        "payment_method": "Credit Card"
+    }
+
+delete:http://localhost:3000/api/payments/78

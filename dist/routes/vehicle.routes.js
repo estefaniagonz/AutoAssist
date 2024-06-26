@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const vehicle_controller_1 = require("../controllers/vehicle.controller");
+const router = (0, express_1.Router)();
+const vehicleController = new vehicle_controller_1.VehicleController();
+router.get('/', (req, res) => vehicleController.getAllVehicles(req, res));
+router.get('/:id', (req, res) => vehicleController.getVehicleById(req, res));
+router.post('/', (req, res) => vehicleController.createVehicle(req, res));
+router.put('/:id', (req, res) => vehicleController.updateVehicle(req, res));
+router.delete('/:id', (req, res) => vehicleController.deleteVehicle(req, res));
+exports.default = router;
